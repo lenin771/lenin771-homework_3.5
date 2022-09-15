@@ -21,14 +21,14 @@ static int[] CreateRandomArray(int size)
     int[] array = new int[size];
     for (int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(-10, 10);  // правая граница не включается
+        array[i] = new Random().Next(0, 100);  // правая граница не включается
     }
     return array;
 }
 
 static int arrayMaxElem(int[] array)
 {
-    int maxNum = 0;
+    int maxNum = array[0];
 
     for (int i = 0; i < array.Length; i++)
     {
@@ -42,7 +42,7 @@ static int arrayMaxElem(int[] array)
 
 static int arrayMinElem(int[] array)
 {
-    int minNum = 0;
+    int minNum = array[0];
 
     for (int i = 0; i < array.Length; i++)
     {
